@@ -22,6 +22,7 @@ _TYPE_TREE_MENU_ uses a binary tree made with std::pair to create a browsable me
 - '6' right node
 - '8' previous node
 - '0' exit
+
 The current position in the binary tree is sent back on the serial port.
 
 ### 6. LUA
@@ -32,7 +33,6 @@ Code which contains the libstdc++ version of std::variant currently won't compil
 
 
 # Results
-Blabla -ffunction-section usw.
 
 ### BLINKY
 | Compiler    | Optimizations | Text     | Data |
