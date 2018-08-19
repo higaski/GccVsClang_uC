@@ -9,11 +9,11 @@ SIZE = arm-none-eabi-size
 
 # Manually add arm-none-eabi include folders
 INC_DIRS += /usr/arm-none-eabi/include
-INC_DIRS += /usr/arm-none-eabi/include/c++/7.3.0
-INC_DIRS += /usr/arm-none-eabi/include/c++/7.3.0/arm-none-eabi/armv7e-m/fpu
-INC_DIRS += /usr/arm-none-eabi/include/c++/7.3.0/backward
-INC_DIRS += /usr/lib/gcc/arm-none-eabi/7.3.0/include
-INC_DIRS += /usr/lib/gcc/arm-none-eabi/7.3.0/include-fixed
+INC_DIRS += /usr/arm-none-eabi/include/c++/8.2.0
+INC_DIRS += /usr/arm-none-eabi/include/c++/8.2.0/arm-none-eabi/thumb/v7e-m+fp/hard/
+INC_DIRS += /usr/arm-none-eabi/include/c++/8.2.0/backward
+INC_DIRS += /usr/lib/gcc/arm-none-eabi/8.2.0/include
+INC_DIRS += /usr/lib/gcc/arm-none-eabi/8.2.0/include-fixed
 
 # Create include flags
 INC_FLAGS = $(addprefix -I,$(INC_DIRS))
@@ -91,11 +91,11 @@ LDFLAGS += $(FLAGS)
 LDFLAGS += -nostartfiles
 LDFLAGS += -nostdlib
 LDFLAGS += -Wl,--gc-sections,-Map=$(MAP) 
-LDFLAGS += /usr/arm-none-eabi/lib/armv7e-m/fpu/crt0.o
-LDFLAGS += /usr/lib/gcc/arm-none-eabi/7.3.0/armv7e-m/fpu/crti.o
-LDFLAGS += /usr/lib/gcc/arm-none-eabi/7.3.0/armv7e-m/fpu/crtbegin.o
-LDFLAGS += /usr/lib/gcc/arm-none-eabi/7.3.0/armv7e-m/fpu/crtn.o
-LDFLAGS += /usr/lib/gcc/arm-none-eabi/7.3.0/armv7e-m/fpu/crtend.o
-LDFLAGS += -L"/usr/arm-none-eabi/lib/armv7e-m/fpu"
-LDFLAGS += -L"/usr/lib/gcc/arm-none-eabi/7.3.0/armv7e-m/fpu"
+LDFLAGS += /usr/arm-none-eabi/lib/crt0.o
+LDFLAGS += /usr/lib/gcc/arm-none-eabi/8.2.0/thumb/v7e-m+fp/hard/crti.o
+LDFLAGS += /usr/lib/gcc/arm-none-eabi/8.2.0/thumb/v7e-m+fp/hard/crtbegin.o
+LDFLAGS += /usr/lib/gcc/arm-none-eabi/8.2.0/thumb/v7e-m+fp/hard/crtn.o
+LDFLAGS += /usr/lib/gcc/arm-none-eabi/8.2.0/thumb/v7e-m+fp/hard/crtend.o
+LDFLAGS += -L"/usr/arm-none-eabi/lib/thumb/v7e-m+fp/hard/"
+LDFLAGS += -L"/usr/lib/gcc/arm-none-eabi/8.2.0/thumb/v7e-m+fp/hard/"
 LDLIBS += -lstdc++_nano -lm -lgcc -lc_nano

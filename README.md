@@ -41,6 +41,10 @@ Blabla -ffunction-section usw.
 | GCC 7.3.0   | -Os           | 4036     | 20   |
 | GCC 7.3.0   | -O2 -flto     | 2520     | 12   |
 | GCC 7.3.0   | -Os -flto     | 2480     | 12   |
+| GCC 8.2.0   | -O2           | 4320     | 20   |
+| GCC 8.2.0   | -Os           | 4044     | 20   |
+| GCC 8.2.0   | -O2 -flto     | 2524     | 12   |
+| GCC 8.2.0   | -Os -flto     | 2480     | 12   |
 | Clang 6.0.1 | -O2           | 4208     | 20   |
 | Clang 6.0.1 | -Os           | 4160     | 20   |
 | Clang 6.0.1 | -Oz           | **4008** | 20   |
@@ -55,6 +59,10 @@ Blabla -ffunction-section usw.
 | GCC 7.3.0   | -Os           | 6696     | 120  |
 | GCC 7.3.0   | -O2 -flto     | 5196     | 112  |
 | GCC 7.3.0   | -Os -flto     | 5140     | 112  |
+| GCC 8.2.0   | -O2           | 6996     | 120  |
+| GCC 8.2.0   | -Os           | 6712     | 120  |
+| GCC 8.2.0   | -O2 -flto     | 5208     | 112  |
+| GCC 8.2.0   | -Os -flto     | 5148     | 112  |
 | Clang 6.0.1 | -O2           | 6892     | 120  |
 | Clang 6.0.1 | -Os           | 6840     | 120  |
 | Clang 6.0.1 | -Oz           | **6668** | 120  |
@@ -69,6 +77,10 @@ Blabla -ffunction-section usw.
 | GCC 7.3.0   | -Os           | **7736** | 120  |
 | GCC 7.3.0   | -O2 -flto     | 6552     | 112  |
 | GCC 7.3.0   | -Os -flto     | **6360** | 112  |
+| GCC 8.2.0   | -O2           | 8092     | 120  |
+| GCC 8.2.0   | -Os           | 7760     | 120  |
+| GCC 8.2.0   | -O2 -flto     | 6568     | 112  |
+| GCC 8.2.0   | -Os -flto     | 6368     | 112  |
 | Clang 6.0.1 | -O2           | 8232     | 120  |
 | Clang 6.0.1 | -Os           | 8140     | 120  |
 | Clang 6.0.1 | -Oz           | 7904     | 120  |
@@ -83,6 +95,10 @@ Blabla -ffunction-section usw.
 | GCC 7.3.0   | -Os           | 7296     | 120  |
 | GCC 7.3.0   | -O2 -flto     | 5504     | 112  |
 | GCC 7.3.0   | -Os -flto     | **5444** | 112  |
+| GCC 8.2.0   | -O2           | 7600     | 120  |
+| GCC 8.2.0   | -Os           | 7312     | 120  |
+| GCC 8.2.0   | -O2 -flto     | 5520     | 112  |
+| GCC 8.2.0   | -Os -flto     | 5448     | 112  |
 | Clang 6.0.1 | -O2           | 7584     | 120  |
 | Clang 6.0.1 | -Os           | 7516     | 120  |
 | Clang 6.0.1 | -Oz           | **7264** | 120  |
@@ -96,7 +112,11 @@ Blabla -ffunction-section usw.
 | GCC 7.3.0   | -O2           | 10552     | 124  |
 | GCC 7.3.0   | -Os           | 10332     | 124  |
 | GCC 7.3.0   | -O2 -flto     | 8128      | 116  |
-| GCC 7.3.0   | -Os -flto     | **8112**  | 116  |
+| GCC 7.3.0   | -Os -flto     | 8112      | 116  |
+| GCC 8.2.0   | -O2           | 10676     | 124  |
+| GCC 8.2.0   | -Os           | 10344     | 124  |
+| GCC 8.2.0   | -O2 -flto     | 8108      | 116  |
+| GCC 8.2.0   | -Os -flto     | **8068**  | 116  |
 | Clang 6.0.1 | -O2           | 10456     | 124  |
 | Clang 6.0.1 | -Os           | 10292     | 124  |
 | Clang 6.0.1 | -Oz           | **10116** | 124  |
@@ -111,6 +131,10 @@ Blabla -ffunction-section usw.
 | GCC 7.3.0   | -Os           | **127704** | 584  |
 | GCC 7.3.0   | -O2 -flto     | 137824     | 580  |
 | GCC 7.3.0   | -Os -flto     | **125768** | 580  |
+| GCC 8.2.0   | -O2           | 140156     | 576  |
+| GCC 8.2.0   | -Os           | 128460     | 576  |
+| GCC 8.2.0   | -O2 -flto     | 138444     | 580  |
+| GCC 8.2.0   | -Os -flto     | 126612     | 580  |
 | Clang 6.0.1 | -O2           | 169728     | 580  |
 | Clang 6.0.1 | -Os           | 137184     | 580  |
 | Clang 6.0.1 | -Oz           | 132208     | 580  |
@@ -123,9 +147,9 @@ Blabla -ffunction-section usw.
 
 ### Prerequisites
 The following packages must be installed in order to build the examples:
-- arm-none-eabi-gcc 7.3.0-1
-- arm-none-eabi-newlib 3.0.0-1
-- arm-none-eabi-binutils 2.31-1
+- arm-none-eabi-gcc ~~7.3.0.1~~ 8.2.0
+- arm-none-eabi-newlib ~~3.0.0.1~~ 3.0.0.2
+- arm-none-eabi-binutils 2.31.1
 - clang 6.0.1-1
 
 In case your installation of _arm-none-eabi_ does not default to _/usr/arm-none-eabi_ please make sure to adjust the paths in _mk/gcc-arm.mk_ and _mk/clang-arm.mk_. The toolchains can be switched by passing the additional symbol _CLANG_ to make.
